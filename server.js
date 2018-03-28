@@ -30,7 +30,7 @@ if (mongoURL == null && process.env.DATABASE_SERVICE_NAME) {
         mongoURL += mongoHost + ':' + mongoPort + '/' + mongoDatabase;
     }
 }
-if(mongoURL == null) {
+if (mongoURL == null) {
     mongoURL = 'mongodb://userYWI:26UMFqPdyYl8oIsQ@localhost:27017/sampledb';
 }
 
@@ -102,6 +102,10 @@ mongoose.connect(mongoURL, dbErr => {
                 });
             }
         })
+    });
+
+    app.get('/liveness', function (request, response) {
+        response.status(200).send('OK');
     });
 
     app.listen(port, (err) => {
