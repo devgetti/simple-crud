@@ -4,7 +4,7 @@ import mongoose from 'mongoose';
 import Character from './src/character';
 
 const app = express();
-const port = 3001;
+//const port = 3001;
 const dbUrl = 'mongodb://localhost/crud';
 
 var port = process.env.PORT || process.env.OPENSHIFT_NODEJS_PORT || 8080,
