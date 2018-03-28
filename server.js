@@ -31,7 +31,7 @@ if (mongoURL == null && process.env.DATABASE_SERVICE_NAME) {
     }
 }
 if(mongoURL == null) {
-    mongoURL = 'mongodb://userYMI:26UMFqPdyYl8oIsQ@localhost:27017/sampledb';
+    mongoURL = 'mongodb://userYWI:26UMFqPdyYl8oIsQ@localhost:27017/sampledb';
 }
 
 console.log(mongoURL);
