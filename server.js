@@ -7,7 +7,7 @@ const app = express();
 //const port = 3001;
 //const dbUrl = 'mongodb://localhost/crud';
 
-var port = process.env.PORT || process.env.OPENSHIFT_NODEJS_PORT || 8080,
+var port = process.env.PORT || process.env.OPENSHIFT_NODEJS_PORT || 3001,
     ip = process.env.IP || process.env.OPENSHIFT_NODEJS_IP || '0.0.0.0',
     mongoURL = process.env.OPENSHIFT_MONGODB_DB_URL || process.env.MONGO_URL,
     mongoURLLabel = ""
@@ -31,7 +31,8 @@ if (mongoURL == null && process.env.DATABASE_SERVICE_NAME) {
     }
 }
 if (mongoURL == null) {
-    mongoURL = 'mongodb://userYWI:26UMFqPdyYl8oIsQ@localhost:27017/sampledb';
+    //mongoURL = 'mongodb://userYWI:26UMFqPdyYl8oIsQ@localhost:27017/sampledb';
+    mongoURL = 'mongodb://localhost:27017/crud';
 }
 
 console.log(mongoURL);
